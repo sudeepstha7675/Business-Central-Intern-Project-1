@@ -42,4 +42,38 @@ page 50102 "Vehicle List"
             }
         }
     }
+    actions
+    {
+        area(Navigation)
+        {
+            action("Get Model Records")
+            {
+                Caption = 'Get Model Records';
+                ApplicationArea = All;
+                Image = Answers;
+                Promoted = true;
+                PromotedCategory = Report;
+                trigger OnAction()
+                var
+                    ModelPage: Record Model;
+                    ModelPageID: Page "Model Card";
+                begin
+                    if Rec.Model <> '' then begin
+                        ModelPage.SetRange(Make, Rec.Make);
+                        ModelPage.SetRange("Model No.", Rec.Model);
+                        if ModelPage.FindSet() then begin
+                            ModelPageID.SetTableView(ModelPage);
+                            ModelPageID.Run();
+                        end
+                        else begin
+                            Message('No Model with this number');
+                        end;
+                    end
+                    else begin
+                        Message('Model number is Empty');
+                    end;
+                end;
+            }
+        }
+    }
 }
