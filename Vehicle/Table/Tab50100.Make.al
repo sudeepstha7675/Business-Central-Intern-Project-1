@@ -8,6 +8,7 @@ table 50100 Make
         field(1; "Code"; Code[20])
         {
             Caption = 'Code';
+            NotBlank = true;
         }
         field(2; Description; Text[100])
         {

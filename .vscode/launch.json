@@ -8,7 +8,7 @@
             "tenant": "M365x79165216.onmicrosoft.com",
             "environmentType": "Sandbox",
             "environmentName": "sudip",
-            "startupObjectId": 50103,
+            "startupObjectId": 50100,
             "startupObjectType": "Page",
             "breakOnError": "All",
             "launchBrowser": true,

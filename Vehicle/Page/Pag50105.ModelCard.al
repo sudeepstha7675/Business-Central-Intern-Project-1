@@ -21,6 +21,11 @@ page 50105 "Model Card"
                 {
                     ToolTip = 'Specifies the value of the Make field.';
                 }
+                field("Make Description"; Rec."Make Description")
+                {
+                    ToolTip = 'Specifies the value of the Make Description field.';
+                    Editable = false;
+                }
                 field(Decription; Rec.Decription)
                 {
                     ToolTip = 'Specifies the value of the Decription field.';

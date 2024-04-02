@@ -21,6 +21,11 @@ page 50101 Model
                 {
                     ToolTip = 'Specifies the value of the Model No. field.';
                 }
+                field("Make Description"; Rec."Make Description")
+                {
+                    ToolTip = 'Specifies the value of the Model Description field.';
+                    Editable = false;
+                }
                 field(Decription; Rec.Decription)
                 {
                     ToolTip = 'Specifies the value of the Decription field.';

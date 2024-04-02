@@ -16,6 +16,12 @@ table 50101 Model
             DataClassification = CustomerContent;
             Caption = 'Model No.';
         }
+        field(10; "Make Description"; Text[100])
+        {
+            Caption = 'Make Description';
+            FieldClass = FlowField;
+            CalcFormula = lookup(Make.Description where(Code = field(Make)));
+        }
         field(3; Decription; Text[100])
         {
             DataClassification = CustomerContent;
